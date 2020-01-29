@@ -19,13 +19,13 @@ MvSensor::MvSensor()
     }
     else {
          std::cout << "wiring pi setup successfully" << std::endl;
-         pinMode(16, INPUT);
+         pinMode(16, INPUT);	//wiringpi rpi 3 issue changed th pins with 15
     }
 }
 
 bool MvSensor::moving()
 {
-    int rv = digitalRead(16);
+    int rv = digitalRead(16);	//wiringpi rpi 3 issue changed th pins with 15
     //std::cout << rv << std::endl;
     return rv;
 }
